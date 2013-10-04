@@ -36,12 +36,21 @@ Inherits="_Default" %>
         
         <br /><br />
 
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+        <% If Not IsPostBack Then%>
+            <!-- This is the first time the page has loaded. There is nothing to display. -->
 
-        <br /><br />
-
+        <p>Welcome to my mortgage calculator. Please complete the fields above to have your monthly payment and loan calculated for you.</p>
+        <% Else%>
+            <!-- Then the page is in postback so show the monthly payment and payment schedule. -->
+                <br />
+ 
+            Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+                <br />
+                <br />
+ 
         <asp:GridView ID="loanGridView" runat="server" />
-        
+        <%End If%>      
+         
         </div>
     </form>
 </body>
