@@ -16,13 +16,19 @@ Inherits="_Default" %>
         
         Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
         
+        <asp:RequiredFieldValidator ID="rfvLoanAmount" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="** Please Enter A Loan Amount"></asp:RequiredFieldValidator>
+        
         <br /><br />
         
         Annual Interest %: <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>
         
+        <asp:RequiredFieldValidator ID="rfvAnnualInterest" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="** Please Enter An Annual Interest Rate"></asp:RequiredFieldValidator>
+        
         <br /><br />
         
         Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
+        
+        <asp:RequiredFieldValidator ID="rfvLoanTerm" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="** Please Enter The Length Of The Loan"></asp:RequiredFieldValidator>
         
         <br /><br />
         
